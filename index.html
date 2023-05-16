@@ -1,0 +1,507 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT</title>
+    <link rel="icon" href="./Assets/bitcoin.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/f63e6e55ad.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        function Log() {
+
+            var val1 = document.getElementById("validationCustom01").value;
+            var val2 = document.getElementById("validationCustom02").value;
+
+            if (val2 == "") {
+                alert("Please fill Login Details");
+                return false;
+            }
+            else {
+                alert("Login Successfully");
+                return true;
+            }
+        }  
+    </script>
+
+
+
+    <script>
+        function gg() {
+
+            var email = document.getElementById("Email1").value;
+
+
+            var firstpassword = document.getElementById("pass").value;
+            var secondpassword = document.getElementById("confirm").value;
+
+
+
+            if (firstpassword == secondpassword) {
+                alert("Account creates");
+                return false;
+            }
+            else {
+                alert("password mut be same");
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- START NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+        <a class="navbar-brand mr-2" href="#" style="font-weight: 500">BITZONE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home" style="font-weight: 500">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" style="font-weight: 500">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" style="font-weight: 500">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team" style="font-weight: 500">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" style="font-weight: 500">Contact us</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Register
+            </button>
+            <button type="button" class="btn btn-primary mx-3" data-toggle="modal" data-target="#exampleModa2">
+                Login
+            </button>
+
+
+        </div>
+    </nav>
+    <!-- register Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register to BITZONE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form onsubmit="return gg()">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="pass" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm" required>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+
+
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--login Modal -->
+    <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="examp2eModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Welcome Investers</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom01">Username</label>
+                                <input type="email" class="form-control" id="validationCustom01" value="" required>
+                                <div class="valid-feedback">
+                                    Valid
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom02">Password</label>
+                                <input type="password" class="form-control" maxlength="8" size="8"
+                                    id="validationCustom02" value="" required>
+                                <div class="valid-feedback">
+                                    Valid
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-primary" type="submit" onclick="return log()">Get In</button>
+                    </form>
+
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAVBAR -->
+    <!-- Home Section Start -->
+    <section id="home" class="home-area hero-equal-height section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="home-content z-index position-relative">
+                        <h1>Bitcoin Invest<br>Easy & Secure way</h1>
+                        <p>Bitcoin is a worldwide cryptocurrency and digital payment system called the first
+                            decentralized digital currency, since the system works without<br> a central repository
+                            or single administrator.</p>
+                        <div class="home-button-box">
+                            <a href="#" class="button home-btn-2 js-scroll">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="home-content-image">
+                        <img src="./Assets/hero-img.png" alt="home images">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Section End -->
+    <!-- Start Services Section -->
+    <section id="services" class="services-area section-padding">
+        <div class="container">
+            <div class="section-title">
+                <span>Ripple Services & Features</span>
+                <h2>Start trading crypto</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-1.svg" alt="icon">
+                        <h3>Bitcoin Transaction</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-2.svg" alt="icon">
+                        <h3>Instant Exchange</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-3.svg" alt="icon">
+                        <h3>Investment Banking</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-4.svg" alt="icon">
+                        <h3>Safe Browsing</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-5.svg" alt="icon">
+                        <h3>Easy Wallet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-content text-center">
+                        <img src="./Assets/services-icon-6.svg" alt="icon">
+                        <h3>Reliable & Low Cost</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Start About Section -->
+    <section id="about" class="about-area">
+        <div class="container">
+            <div class="row about-wrap align-items-center">
+                <div class="col-lg-6 col-md-12 rs-padding my-2">
+                    <div class="about-details">
+                        <h2>Our mission is new technology trading with Bitcoin</h2>
+                        <p>cryptocurrency invented in 2008 by an unknown person or group of people using the name
+                            Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as
+                            open-source software.</p>
+                        <ul class="about-list">
+                            <li><i class="fa fa-check-circle-o"></i> Platform for launching your ICO</li>
+                            <li><i class="fa fa-check-circle-o"></i> Using Smart Contracts system etc.</li>
+                            <li><i class="fa fa-check-circle-o"></i> Token Fixed exchange rates</li>
+                            <li><i class="fa fa-check-circle-o"></i> Using Smart Contracts support system</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 rs-padding">
+                    <div class="about-image">
+                        <img src="./Assets/about.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Start Overview Section -->
+    <section class="overview-area pd-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 rs-padding">
+                    <div class="overview-details">
+                        <h2>Powerful mining invest <br>with Safe & Secure.</h2>
+                        <p>cryptocurrency invented in 2008 by an unknown person or group of people using the name
+                            Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as
+                            open-source software.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 rs-padding">
+                    <div class="overview-images">
+                        <img src="./Assets/overview.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- End Overview Section -->
+
+    <!-- Team Section Start -->
+    <section class="team-area section-padding my-" id="team">
+        <div class="container">
+            <div class="section-title">
+                <span>Bring Our team together</span>
+                <h2>Meet Ripple Team</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-team-box">
+                        <div class="team-image">
+                            <img src="./Assets/Tanjiro.webp" alt="team" />
+                        </div>
+                        <div class="team-info">
+                            <h3>Tanjiro</h3>
+                            <span>Founder, Ceo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-team-box">
+                        <div class="team-image">
+                            <img src="./Assets/Inosuke.jpg" alt="team" />
+                        </div>
+                        <div class="team-info">
+                            <h3>Inosuke</h3>
+                            <span>Co-founder, Cto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-team-box">
+                        <div class="team-image">
+                            <img src="./Assets/Zenitsu.webp" alt="team" />
+                        </div>
+                        <div class="team-info">
+                            <h3>Zenitsu</h3>
+                            <span>Chief Creative Officer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-team-box">
+                        <div class="team-image">
+                            <img src="./Assets/Nezuko.png" alt="team" />
+                        </div>
+                        <div class="team-info">
+                            <h3>Nezuko</h3>
+                            <span>Marketing Advisor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+
+    <!-- Start Footer Section -->
+    <section class="footer-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 rs-padding">
+
+                    <div class="footer-content">
+                        <h1>BITZONE</h1>
+                        <p>cryptocurrency invented in 2008 by an unknown person or group of people using the name
+                            Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as
+                            open-source software.</p>
+                        <ul class="footer-social">
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-twitter"></i></li>
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-youtube"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rs-padding">
+                    <div class="footer-content mid-content">
+                        <h3>Usefull Link</h3>
+                        <ul class="footer-link">
+                            <li><a href="#">Mobile Apps</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privecy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rs-padding" id="contact">
+                    <div class="footer-content">
+                        <h3>Contact Us</h3>
+                        <ul class="footer-link">
+                            <li><i class="fa fa-headphones" aria-hidden="true"></i> +033 113-7771 505</li>
+                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a
+                                    href="mailto:contact@example.com">tanjiro@example.com</a></li>
+                            <li><i class="fa fa-home" aria-hidden="true"></i>College Road, Nashik, INDIA
+                            </li>
+                        </ul>
+                        <div class="subscribe-form-wrap">
+                            <form action="#" class="subscribe-form">
+                                <input type="email" name="email" id="subs-email" class="form-input"
+                                    placeholder="Enter Email">
+                                <i class="fa fa-envelope"></i>
+                                <button type="submit" class="submit-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-bottom align-center">
+        <div class="container">
+            <p>Tanjiro © 2022 - Designed Tanjiro.</p>
+        </div>
+    </footer>
+    <!-- Start Footer Section -->
+
+</body>
+
+</html>
